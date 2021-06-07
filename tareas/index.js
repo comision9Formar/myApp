@@ -9,5 +9,6 @@ module.exports = {
             estado
         }
         tareas.push(tarea)
-    }
+    },
+    guardarJSON : tareas => fs.writeFileSync("./data/tareas.json",JSON.stringify(tareas,null,2),"utf-8")
 }
